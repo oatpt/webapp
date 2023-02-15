@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <div id="maincontainer"></div>
+    <script>
+        var div_main = document.createElement("div");
+
+        var title = document.createElement("h3");
+        var title_text = document.createTextNode("Exercise 04: JavaScript&DOM");
+        title.appendChild(title_text);
+        div_main.appendChild(title);
+
+        var w;
+        var button = document.createElement("BUTTON");
+        var button_text = document.createTextNode("Click me to display Date and Time");
+        button.appendChild(button_text);
+        button.style.top=0+'px';
+        button.style.right=0+'px';
+        div_main.appendChild(button);
+        
+        button.addEventListener('click', (event) => {
+
+            if (typeof (w) == "undefined") {
+                w = new Worker("worker.js");
+                w.onmessage = function (event) 
+                {
+                    button.innerHTML = event.data['time'];
+                    button.style.position = "fixed";
+                    
+                    switch (event.data['num']%6) {
+                        case 0:
+                            button.style.backgroundColor="#48C9B0"
+                            button.style.color="#2980B9"
+                            break;
+                        case 1:
+                            button.style.backgroundColor="#3498DB"
+                            button.style.color="#F4D03F"
+                            break;
+                        case 2:
+                            button.style.backgroundColor="#9B59B6"
+                            button.style.color="#E74C3C"
+                            break;
+                        case 3:
+                            button.style.backgroundColor="#E74C3C"
+                            button.style.color="#9B59B6"
+                            break;
+                        case 4:
+                            button.style.backgroundColor="#F4D03F"
+                            button.style.color="#3498DB"
+                            break;
+                        case 5:
+                            button.style.backgroundColor="#2980B9"
+                            button.style.color="#48C9B0"
+                            break;
+                    
+                    }
+                }
+            }
+            else{
+                w.terminate();
+                w = undefined;
+                button.style.position  = "static";
+            }
+            
+        });
+
+
+        var Info = document.createElement("p");
+        var Info_a = document.createElement("A");
+        var Info_text = document.createTextNode("Personal Info");
+        Info_a.appendChild(Info_text);
+        Info_a.style.color = "#FFCCCC";
+        Info_a.style.backgroundColor = "#FFFFFF"
+        Info_a.onmouseout = function () { Info_focusout(Info_a) };
+        Info_a.onmouseover = function () { Info_focusin(Info_a) };
+        var show = false
+        Info_a.setAttribute('href', "#");
+        Info_a.setAttribute('onclick', "show_Info(div_Info)");
+        Info.appendChild(Info_a);
+        div_main.appendChild(Info);
+
+        var div_Info = document.createElement("div");
+        div_main.appendChild(div_Info);
+
+        var Snapshots = document.createElement("h2");
+        var Snapshots_text = document.createTextNode("Snapshots");
+        Snapshots.appendChild(Snapshots_text);
+        var Snapshots_ul = document.createElement("UL");
+        var Snapshots_li_Fireworks = document.createElement("LI");
+        var Snapshots_A_Fireworks = document.createElement("A");
+        var Snapshots_text_Fireworks = document.createTextNode("Fireworks");
+        Snapshots_A_Fireworks.setAttribute('href', "#");
+        Snapshots_A_Fireworks.setAttribute('onclick', "Show_Fireworks(img)");
+        Snapshots_A_Fireworks.appendChild(Snapshots_text_Fireworks);
+        Snapshots_li_Fireworks.appendChild(Snapshots_A_Fireworks);
+        Snapshots_ul.appendChild(Snapshots_li_Fireworks);
+
+
+        var Snapshots_li_Crest = document.createElement("LI");
+        var Snapshots_A_Crest = document.createElement("A");
+        var Snapshots_text_Crest = document.createTextNode("Crest");
+        Snapshots_A_Crest.setAttribute('href', "#");
+        Snapshots_A_Crest.setAttribute('onclick', "Show_Crest(img)");
+        Snapshots_A_Crest.appendChild(Snapshots_text_Crest);
+        Snapshots_li_Crest.appendChild(Snapshots_A_Crest);
+        Snapshots_ul.appendChild(Snapshots_li_Crest);
+
+
+        var Snapshots_li_Action = document.createElement("LI");
+        var Snapshots_A_Action = document.createElement("A");
+        var Snapshots_text_Action = document.createTextNode("Action");
+        Snapshots_A_Action.setAttribute('href', "#");
+        Snapshots_A_Action.setAttribute('onclick', "Show_Action(img)");
+        Snapshots_A_Action.appendChild(Snapshots_text_Action);
+        Snapshots_li_Action.appendChild(Snapshots_A_Action);
+        Snapshots_ul.appendChild(Snapshots_li_Action);
+
+
+        var Snapshots_li_Buffalo = document.createElement("LI");
+        var Snapshots_A_Buffalo = document.createElement("A");
+        var Snapshots_text_Buffalo = document.createTextNode("Buffalo");
+        Snapshots_A_Buffalo.setAttribute('href', "#");
+        Snapshots_A_Buffalo.setAttribute('onclick', "Show_Buffalo(img)");
+        Snapshots_A_Buffalo.appendChild(Snapshots_text_Buffalo);
+        Snapshots_li_Buffalo.appendChild(Snapshots_A_Buffalo);
+        Snapshots_ul.appendChild(Snapshots_li_Buffalo);
+
+        div_main.appendChild(Snapshots);
+        div_main.appendChild(Snapshots_ul);
+
+        var img = document.createElement("IMG");
+        img.setAttribute("src", "https://curriculum.kmitl.ac.th/wp-content/uploads/2021/07/1440753623-72-o.jpg");
+        img.setAttribute("width", "500");
+        div_main.appendChild(img);
+
+        document.getElementById("maincontainer").appendChild(div_main);
+
+        function Info_focusin(x) {
+            x.style.color = "#0000FF";
+            x.style.backgroundColor = "#FFFF00"
+        }
+        function Info_focusout(x) {
+            x.style.color = "#FFCCCC";
+            x.style.backgroundColor = "#FFFFFF"
+        }
+        function show_Info(x) {
+            if (show == false) {
+                var Info_ul = document.createElement("UL");
+                var Info_li_name = document.createElement("LI");
+                var Info_text_name = document.createTextNode("Phaithun Thongmisrisuk of student, ID: 64010635");
+                Info_li_name.appendChild(Info_text_name);
+                Info_ul.appendChild(Info_li_name);
+                var Info_li_Subject = document.createElement("LI");
+                var Info_text_Subject = document.createTextNode("Subject:Web Application Development");
+                Info_li_Subject.appendChild(Info_text_Subject);
+                Info_ul.appendChild(Info_li_Subject);
+                var Info_li_Semester = document.createElement("LI");
+                var Info_text_Semester = document.createTextNode("Semester:2");
+                Info_li_Semester.appendChild(Info_text_Semester);
+                Info_ul.appendChild(Info_li_Semester);
+                x.appendChild(Info_ul);
+                show = true;
+            }
+            else {
+                x.innerHTML = "";
+                show = false;
+            }
+        }
+        function Show_Fireworks(x) {
+            x.setAttribute("src", "https://ichef.bbci.co.uk/images/ic/1920x1080/p05lqc4f.jpg");
+        }
+        function Show_Crest(x) {
+            x.setAttribute("src", "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/713XPo-M9sL.jpg");
+        }
+        function Show_Action(x) {
+            x.setAttribute("src", "https://synapseindia.website/blog/wp-content/uploads/2016/01/Tips-to-Create-an-Powerful-Call-to-Action.jpg");
+        }
+        function Show_Buffalo(x) {
+            x.setAttribute("src", "https://res.cloudinary.com/roundglass/image/upload/q_auto/ar_16:9,c_fill,w_1250/f_auto,g_auto/v1585055391/roundglass/sustain/Kaziranga_Buffalo-Arindam-Bhattacharya-copy-2-1_t8tykb.jpg");
+        }
+    </script>
+</body>
+
+</html>
