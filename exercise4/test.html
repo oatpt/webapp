@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <div id="maincontainer"></div>
+    <script>
+        const main =document.getElementById('maincontainer');
+
+        const titel = document.createElement('h3');
+        titel.innerText='Exercise 04: JavaScript&DOM';
+        main.appendChild(titel);
+
+        const button = document.createElement('button');
+        button.innerText ='Click me to display Date and Time'
+        button.addEventListener('click',showtime)
+        button.style.top=0+'px';
+        button.style.right=0+'px';
+        main.appendChild(button);
+        let w;
+        function showtime() {
+            
+           if (w == undefined) 
+           {
+                w = new Worker("worker.js");
+                button.style.position='fixed'
+                w.onmessage = function (event){
+                    button.innerText=event.data['time'];
+                    if(event.data['num']%6==0)
+                    {
+                        button.style.color='#123456'
+                        button.style.backgroundColor='#FF00BA'
+                    }
+                }
+           }
+           else
+           {
+                button.style.position='static'
+                w.terminate();
+                w = undefined;
+           }
+        }
+
+        const info = document.createElement('p');
+        const info_a = document.createElement('a');
+        info_a.innerText='Personal Info'
+        info_a.setAttribute('href','#');
+        info_a.style.color="#FFCCCC"
+        info_a.style.backgroundColor = "#FFFFFF"
+        info_a.addEventListener('mouseover',x=>{
+            info_a.style.color = "#0000FF";
+            info_a.style.backgroundColor = "#FFFF00"
+        })
+        info_a.addEventListener('mouseout',x=>{
+            info_a.style.color = "#FFCCCC";
+            info_a.style.backgroundColor = "#FFFFFF"
+        })
+        info_a.addEventListener('click',showinfo)
+        info.appendChild(info_a)
+        main.appendChild(info)
+        
+        const div_info = document.createElement('div')
+        main.appendChild(div_info)
+
+        const Snapshots = document.createElement('h2');
+        Snapshots.innerText='Snapshots';
+        main.appendChild(Snapshots);
+
+        const group = document.createElement('ul');
+        
+        const fireworks = document.createElement('li');
+        const fireworks_a = document.createElement('a');
+        fireworks_a.innerText='Fireworks';
+        fireworks_a.setAttribute('href','#');
+        fireworks_a.addEventListener('click',event=>{
+            pic.setAttribute("src","https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/713XPo-M9sL.jpg")
+        })
+        fireworks.appendChild(fireworks_a);
+        group.appendChild(fireworks)
+
+        const Crest = document.createElement('li');
+        const Crest_a = document.createElement('a');
+        Crest_a.innerText='Crest';
+        Crest.appendChild(Crest_a);
+        group.appendChild(Crest)
+        
+        
+        main.appendChild(group)
+
+
+        const pic = document.createElement('img');
+        pic.setAttribute("src","https://curriculum.kmitl.ac.th/wp-content/uploads/2021/07/1440753623-72-o.jpg")
+        pic.setAttribute('width','500')
+        main.appendChild(pic);
+
+        function showinfo() {
+            if(div_info.innerHTML=='')
+            {
+                const group_info = document.createElement('ul');
+            
+                const name = document.createElement('li');
+                name.innerText='oat';
+
+                group_info.appendChild(name);
+                div_info.appendChild(group_info)
+            }
+            else
+            {
+                div_info.innerHTML='';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Menu {
+  background: bisque;
+  width: 65%;
+  border-radius: 10px;
+  border: 3px black solid;
+  padding: 10px 20px;
+}
+.design {
+  text-align: left;
+  width: 60%;
+}
+.pic {
+  width: 40%;
+
+  float: right;
+}
+#title {
+  color:gold;
+}
+body {
+  background-color: dimgray;
+}
+.box{
+  clear: right;
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: auto;
+}
+#vote2{
+  background-color: chartreuse;
+  border: 2px black solid;
+  border-radius: 5px;
+  padding: 5px;
+  color: blueviolet;
+  margin: 0px 10px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 22px;
+}
+.vote{
+  height: 30px;
+  
+  
+}

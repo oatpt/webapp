@@ -1,7 +1,10 @@
-var i=0
+let i=0;
 function timedCount() {
   i = i + 1;
-  a={'time':new Date(),'num':i};
+  const a={
+    'time':new Date(),
+    'num':i
+  };
   postMessage(a);
 
   setTimeout("timedCount()",1000);
