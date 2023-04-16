@@ -19,6 +19,7 @@ public partial class WebContext : DbContext
     }
     public virtual DbSet<TbllistFood> TbllistFood{get;set;}=null!;
     public virtual DbSet<TblUsers> TblUsers{get;set;}=null!;
+    public virtual DbSet<TbllShoppingList> TbllShoppingList{get;set;}=null!;
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=MyConnection");
 

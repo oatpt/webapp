@@ -38,7 +38,7 @@ return (
 		<button type="submit">Log In</button>
 	</form>
 	<button onClick={()=>props.onFromSwitch('register')}>--Register--</button>
-	<button onClick={localStorage.removeItem('token')}>--Logout--</button>
+	<button onClick={()=>localStorage.removeItem('token')}>--Logout--</button>
 	</div>
 );
 };

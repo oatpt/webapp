@@ -11,8 +11,8 @@ using webapi.Models;
 namespace webapi.Migrations
 {
     [DbContext(typeof(WebContext))]
-    [Migration("20230413154737_AddBlogCreatedTimestamp")]
-    partial class AddBlogCreatedTimestamp
+    [Migration("20230416193918_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,28 +33,63 @@ namespace webapi.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("displayname")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("numberphone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("password")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("username")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("TblUsers");
+                });
+
+            modelBuilder.Entity("webapi.Models.TbllShoppingList", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("displaynamereceiver")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("displaynamesender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("idreceiver")
+                        .HasColumnType("int");
+
+                    b.Property<string>("locate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("numberphone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("order")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("shop")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("userreceiver")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("usersender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("TbllShoppingList");
                 });
 
             modelBuilder.Entity("webapi.Models.TbllistFood", b =>
@@ -65,28 +100,25 @@ namespace webapi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<string>("displaynamereceiver")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("locate")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("numberphone")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("order")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("shop")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("status")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("user")
-                        .IsRequired()
+                    b.Property<string>("userreceiver")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");

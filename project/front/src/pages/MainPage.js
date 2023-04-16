@@ -36,7 +36,7 @@ function App() {
     useEffect(() => {
       
       fetchData()
-      
+      console.log(playload)
     }, [])
 
     for (let index = 0; index < playload.length; index++) {
