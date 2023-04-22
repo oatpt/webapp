@@ -53,7 +53,7 @@ var _jwtsetting = builder.Configuration.GetSection("JwtSettings");
 builder.Services.Configure<JwtSetting>(_jwtsetting);
 
 var app = builder.Build();
-
+app.Urls.Add("http://192.168.43.44:7223");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
