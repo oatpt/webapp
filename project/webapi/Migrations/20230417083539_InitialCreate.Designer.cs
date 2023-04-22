@@ -11,7 +11,7 @@ using webapi.Models;
 namespace webapi.Migrations
 {
     [DbContext(typeof(WebContext))]
-    [Migration("20230416193918_InitialCreate")]
+    [Migration("20230417083539_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -110,6 +110,12 @@ namespace webapi.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("order")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("senderdisplayname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("sendernumberphone")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("shop")

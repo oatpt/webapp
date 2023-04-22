@@ -1,9 +1,14 @@
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\webapi.exe
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\publish\web.config
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\web.config
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\appsettings.Development.json
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\appsettings.json
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\appsettings.Development.json
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\appsettings.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\publish\appsettings.Development.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\publish\appsettings.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\publish\webapi.deps.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\publish\webapi.runtimeconfig.json
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\webapi.deps.json
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\publish\webapi.runtimeconfig.json
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\webapi.dll
@@ -13,6 +18,10 @@ C:\Users\oatpt\Desktop\webapp\project\webapi\publish\webapi.pdb
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Azure.Core.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Azure.Identity.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Humanizer.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\System.Web.Cors.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\System.Net.Http.Formatting.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\System.Web.Http.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\System.Web.Http.Cors.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Microsoft.Data.SqlClient.dll
@@ -43,6 +52,8 @@ C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Microsoft.OpenApi.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Microsoft.SqlServer.Server.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Microsoft.Win32.SystemEvents.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Mono.TextTemplating.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Newtonsoft.Json.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Newtonsoft.Json.Bson.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

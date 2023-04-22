@@ -86,3 +86,14 @@ C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\publish\appsetti
 C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\publish\appsettings.json
 C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\publish\webapi.deps.json
 C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\publish\webapi.runtimeconfig.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\publish\publish\web.config
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\publish\publish\appsettings.Development.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\publish\publish\appsettings.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\publish\publish\webapi.deps.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\publish\publish\webapi.runtimeconfig.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\System.Web.Cors.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\System.Net.Http.Formatting.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\System.Web.Http.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\System.Web.Http.Cors.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Release\net6.0\Newtonsoft.Json.Bson.dll

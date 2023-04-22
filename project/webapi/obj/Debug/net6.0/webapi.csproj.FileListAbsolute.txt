@@ -97,3 +97,8 @@ C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Debug\net6.0\System.Web.Http.dl
 C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Debug\net6.0\System.Web.Http.Cors.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Debug\net6.0\publish\publish\publish\web.config
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Debug\net6.0\publish\publish\publish\appsettings.Development.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Debug\net6.0\publish\publish\publish\appsettings.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Debug\net6.0\publish\publish\publish\webapi.deps.json
+C:\Users\oatpt\Desktop\webapp\project\webapi\bin\Debug\net6.0\publish\publish\publish\webapi.runtimeconfig.json

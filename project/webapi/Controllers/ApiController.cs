@@ -55,6 +55,8 @@ namespace webapi.Controllers
                 item.idreceiver=orderfood.id;
                 this._DBContext.TbllShoppingList.Add(item);
                 orderfood.status="process";
+                orderfood.senderdisplayname=item.displaynamesender;
+                orderfood.sendernumberphone=item.numberphone;
                 this._DBContext.TbllistFood.Update(orderfood);
                 this._DBContext.SaveChanges();
 
@@ -178,6 +180,8 @@ namespace webapi.Controllers
                 item.order=obj.order;
                 item.shop=obj.shop;
                 item.status="ready";
+                item.senderdisplayname="...";
+                item.sendernumberphone="...";
                 this._DBContext.TbllistFood.Add(item);
                 this._DBContext.SaveChanges();
                 return Ok("success");

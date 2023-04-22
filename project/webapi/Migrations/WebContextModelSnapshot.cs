@@ -109,6 +109,12 @@ namespace webapi.Migrations
                     b.Property<string>("order")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("senderdisplayname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("sendernumberphone")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("shop")
                         .HasColumnType("nvarchar(max)");
 

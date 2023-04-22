@@ -22,6 +22,8 @@ namespace webapi.Migrations
                     userreceiver = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     displaynamereceiver = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     numberphone = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    senderdisplayname = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    sendernumberphone = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     status = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>

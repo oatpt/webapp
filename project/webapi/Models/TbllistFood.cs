@@ -11,6 +11,8 @@ namespace webapi.Models
         public string? userreceiver{get;set;}
         public string? displaynamereceiver{get;set;}
         public string? numberphone{get;set;}
+        public string? senderdisplayname{get;set;}
+        public string? sendernumberphone{get;set;}
         public string? status{get;set;}
     }
 }
