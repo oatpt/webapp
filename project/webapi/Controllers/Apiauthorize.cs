@@ -77,10 +77,9 @@ namespace webapi.Controllers
             }
         }
         [HttpPost("Edit")]
-        public IActionResult Edit(TblUsers temp)
+        public IActionResult Edit(Edit temp)
         {
             var item = this._DBContext.TblUsers.FirstOrDefault(o => o.username == temp.username);   
-            item.password=temp.password;
             item.email=temp.email;
             item.numberphone=temp.numberphone;
             item.displayname=temp.displayname;

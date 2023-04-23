@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost", "http://localhost:3000").AllowAnyHeader()
+                          policy.WithOrigins("*").AllowAnyHeader()
                                                   .AllowAnyMethod();
                       });
 });
@@ -54,6 +54,7 @@ builder.Services.Configure<JwtSetting>(_jwtsetting);
 
 var app = builder.Build();
 app.Urls.Add("http://192.168.43.44:7223");
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

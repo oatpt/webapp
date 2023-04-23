@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <p>hello</p>
+    </div>
+    <button id="bt">แสดง</button>
+    <button id="bt2">ซ่อน</button>
+    <p id="box"></p>
+    <img id="pic" width="300px" src="https://www.hdnicewallpapers.com/Walls/Big/Tiger/Amazing_HD_Pic_of_Tiger.jpg" alt="">
+
+    <script>
+        var div_main = document.getElementById("content");
+        
+        div_main.onmouseover =function name() {
+            div_main.style.background="#FF00FF"
+        } 
+        div_main.onmouseout =function name() {
+            div_main.style.background="#FFFFFF"
+        } 
+
+        var bt = document.getElementById("bt");
+        var bt2 = document.getElementById("bt2");
+        var box = document.getElementById("box");
+        var pic = document.getElementById("pic");
+        bt.onclick=function(){
+            window.alert('กดแล้ววว');
+            box.innerHTML="555"
+            pic.setAttribute("src","https://ichef.bbci.co.uk/images/ic/1920x1080/p05lqc4f.jpg");
+        }
+        bt2.onclick=function(){
+            window.alert('กดแล้ววว');
+            box.innerHTML=""
+            pic.setAttribute("src","https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/713XPo-M9sL.jpg");
+        }
+
+    </script>
+</body>
+</html>
