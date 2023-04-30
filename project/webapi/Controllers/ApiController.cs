@@ -56,7 +56,7 @@ namespace webapi.Controllers
                 this._DBContext.TbllShoppingList.Add(item);
                 orderfood.status="process";
                 orderfood.senderdisplayname=item.displaynamesender;
-                orderfood.sendernumberphone=item.numberphone;
+                orderfood.sendernumberphone=sender.numberphone;
                 this._DBContext.TbllistFood.Update(orderfood);
                 this._DBContext.SaveChanges();
 
