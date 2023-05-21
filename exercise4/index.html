@@ -7,39 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="content">
-        <p>hello</p>
-    </div>
-    <button id="bt">แสดง</button>
-    <button id="bt2">ซ่อน</button>
-    <p id="box"></p>
-    <img id="pic" width="300px" src="https://www.hdnicewallpapers.com/Walls/Big/Tiger/Amazing_HD_Pic_of_Tiger.jpg" alt="">
-
+    <div id="content"></div>
     <script>
-        var div_main = document.getElementById("content");
+        const content=document.getElementById("content");
         
-        div_main.onmouseover =function name() {
-            div_main.style.background="#FF00FF"
-        } 
-        div_main.onmouseout =function name() {
-            div_main.style.background="#FFFFFF"
-        } 
+        const p=document.createElement("p");
+        const title_text = document.createTextNode("Exercise 04: JavaScript&DOM");
+        p.appendChild(title_text);
 
-        var bt = document.getElementById("bt");
-        var bt2 = document.getElementById("bt2");
-        var box = document.getElementById("box");
-        var pic = document.getElementById("pic");
-        bt.onclick=function(){
-            window.alert('กดแล้ววว');
-            box.innerHTML="555"
-            pic.setAttribute("src","https://ichef.bbci.co.uk/images/ic/1920x1080/p05lqc4f.jpg");
-        }
-        bt2.onclick=function(){
-            window.alert('กดแล้ววว');
-            box.innerHTML=""
-            pic.setAttribute("src","https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/713XPo-M9sL.jpg");
-        }
-
+        content.appendChild(p);
     </script>
 </body>
 </html>
