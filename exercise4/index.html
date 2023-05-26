@@ -14,8 +14,50 @@
         const p=document.createElement("p");
         const title_text = document.createTextNode("Exercise 04: JavaScript&DOM");
         p.appendChild(title_text);
-
         content.appendChild(p);
+        
+        const p1=document.createElement("p");
+        const a=document.createElement("a");
+        const text = document.createTextNode("click");
+        a.setAttribute("href","#");
+        a.setAttribute("onclick","show2()");
+        a.appendChild(text);
+        p1.appendChild(a);
+        content.appendChild(p1);
+        let show=false
+        const div =document.createElement('div')
+        content.appendChild(div)
+
+        function show2() {
+            if (show==false)
+            {
+                const ul =document.createElement("ul");
+                
+                const li1=document.createElement("li");
+                const p2=document.createElement("p");
+                const text2 = document.createTextNode("hello");
+                p2.appendChild(text2);
+                ul.appendChild(li1);
+                li1.appendChild(p2)
+
+                const li3=document.createElement("li");
+                const p3=document.createElement("p");
+                const text3 = document.createTextNode("hello2");
+                p3.appendChild(text3);
+                li3.appendChild(p3)
+                ul.appendChild(li3);
+                
+                div.appendChild(ul);
+                show=true;
+            }
+            else
+            {
+                div.innerHTML=""
+                show=false;
+            }
+        }
+
+
     </script>
 </body>
 </html>

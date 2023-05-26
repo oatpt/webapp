@@ -74,8 +74,8 @@
         Info_a.appendChild(Info_text);
         Info_a.style.color = "#FFCCCC";
         Info_a.style.backgroundColor = "#FFFFFF"
-        Info_a.onmouseout = function () { Info_focusout(Info_a) };
-        Info_a.onmouseover = function () { Info_focusin(Info_a) };
+        Info_a.onmouseout =()=>Info_focusout(Info_a) ;
+        Info_a.onmouseover =()=>Info_focusin(Info_a) ;
         
         var show = false
         Info_a.setAttribute('href', "#");

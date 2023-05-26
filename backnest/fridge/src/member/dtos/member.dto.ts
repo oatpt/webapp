@@ -1,6 +1,6 @@
-export class Member {
+export class Memberdto {
     //id:number;
-    id:string;
+    address:number;
     name:string;
     role:string;
 }

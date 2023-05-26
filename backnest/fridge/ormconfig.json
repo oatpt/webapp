@@ -1,0 +1,10 @@
+{
+    "type": "postgres",
+    "host": "167.71.205.31",
+    "port": 5433,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "fridge",
+    "entities":["src/**/**.entity{.ts,.js}"],
+    "synchronize": true
+    }
